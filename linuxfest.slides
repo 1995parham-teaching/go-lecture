@@ -1,0 +1,22 @@
+Introduction to Go
+Amirkabir University of Technology Linux Festival
+28 May 2016
+
+
+1995parham
+parham.alvani@gmail.com
+http://1995parham.me/
+
+* The Go programming language
+
+- Modern
+- Compact, concise, general-purpose
+- Imperative, statically type-checked, dynamically type-safe
+- Garbage-collected
+- Opinionated, no warnings, unused local vars and imports are an error
+- Strong support for concurrency
+- Compiles to native code, statically linked
+- Fast compilation, efficient execution
+- UTF8
+
+Designed by programmers for programmers!
