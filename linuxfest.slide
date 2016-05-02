@@ -7,6 +7,10 @@ Amirkabir University of Technology Linux Festival
 parham.alvani@gmail.com
 http://1995parham.me/
 
+* Outline
+- The Go programming language
+- Hello, World!
+
 * The Go programming language
 
 - Modern
@@ -20,3 +24,7 @@ http://1995parham.me/
 - UTF8
 
 Designed by programmers for programmers!
+
+* Hello, World!
+
+.play linuxfest/hello.go
