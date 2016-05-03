@@ -11,3 +11,24 @@ cd /path/to/this/slide
 $GOPATH/bin/present
 ```
 ## Outline
+* Introduction to GoLang
+* The Go Programming Language
+    * Program Elements
+    * Constants
+    * Variables
+    * Types
+    * Types Declaration
+    * Slices
+    * Pointers
+    * Maps
+    * Statements
+    * Functions
+    * Method
+    * Interface Types
+    * Packages
+* Concurrency
+    * GoRoutine
+    * Channels
+* Miscellaneous
+    * Go Tools
+    * Beehive
