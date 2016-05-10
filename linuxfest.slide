@@ -10,6 +10,7 @@ http://1995parham.me/
 * Outline
 - The Go programming language
 - Hello, World!
+- The GoLang concepts
 
 * The Go programming language
 
@@ -28,3 +29,5 @@ Designed by programmers for programmers!
 * Hello, World!
 
 .play linuxfest/hello.go
+
+* The GoLang concepts [Program Elements]
