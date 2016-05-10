@@ -30,4 +30,6 @@ Designed by programmers for programmers!
 
 .play linuxfest/hello.go
 
-* The GoLang concepts [Program Elements]
+* The GoLang concepts [Values]
+
+.play linuxfest/values.go
