@@ -28,8 +28,12 @@ Designed by programmers for programmers!
 
 * Hello, World!
 
-.play linuxfest/hello.go
+.play src/hello.go
+
+- Package Statements
+- Imported Packages
+- ....
 
 * The GoLang concepts [Values]
 
-.play linuxfest/values.go
+.play src/values.go
