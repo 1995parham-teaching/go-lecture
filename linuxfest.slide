@@ -37,3 +37,4 @@ Designed by programmers for programmers!
 * The GoLang concepts [Values]
 
 .play src/values.go
+The `new()` built-in function creates a new integer and returns a pointer to it.
