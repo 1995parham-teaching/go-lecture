@@ -12,7 +12,10 @@ http://1995parham.me/
 - Hello, World!
 - The GoLang concepts [Values]
 - Prime, or Not Prime
+- The GoLang concepts [Functions]
 - The GoLang concepts [Structures]
+- The GoLang concepts [Interfaces]
+- The GoLang concepts [Casting Types]
 
 
 * The Go programming language
@@ -65,6 +68,14 @@ The `new()` built-in function creates a new integer and returns a pointer to it.
 
 * The GoLang concepts [Interfaces]
 .code src/interfaces.go
+
+* The GoLang concepts [Casting Types]
+- type conversion: A type conversion is similar to a cast in C. It reinterprets the value as a new type
+.code src/type-conversion.go
+
+* The GoLang concepts [Casting Types]
+- type assertion: They do not convert between types; they simply state to the compiler that the underlying value has the specific type.
+.play src/type-assertion.go
 
 * Analytic geometry !
 Let's write some code
