@@ -191,3 +191,54 @@ Common slice operations:
 
 - Slices play the role of dynamically sized arrays
 - Widely used in Go code
+
+* Concurrency
+
+* Goroutines
+
+- The _go_ statement launches a function call as a goroutine
+	go f()
+	go f(x, y, ...)
+
+- A goroutine runs concurrently (but not necessarily in parallel)
+- A goroutine is a thread of control within the program, with its own local variables and stack. Much cheaper to create and schedule than operating system threads.
+
+
+* A simple example
+
+.code src/concurrency1.go /f START/,/f END/
+
+Function f is launched as 3 different goroutines, all running concurrently:
+
+.play src/concurrency1.go /main START/,/main END/
+
+
+* Communication via channels
+
+A channel type specifies a channel value type (and possibly a communication direction):
+
+	chan int
+	chan<- string  // send-only channel
+	<-chan T       // receive-only channel
+
+A channel is a variable of channel type:
+
+	var ch chan int
+	ch := make(chan int)  // declare and initialize with newly made channel
+
+A channel permits _sending_ and _receiving_ values:
+
+	ch <- 1   // send value 1 on channel ch
+	x = <-ch  // receive a value from channel ch (and assign to x)
+
+Channel operations synchronize the communicating goroutines.
+
+* Communicating goroutines
+
+Each goroutine sends its results via channel ch:
+
+.code src/concurrency2.go /f START/,/f END/
+
+The main goroutine receives (and prints) all results from the same channel:
+
+.play src/concurrency2.go /main START/,/main END/
