@@ -59,3 +59,6 @@ The `new()` built-in function creates a new integer and returns a pointer to it.
 
 * The GoLang concepts [Methods]
 .play src/methods.go
+
+* The GoLang concepts [Intefaces]
+.play src/interfaces.go
