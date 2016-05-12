@@ -167,3 +167,27 @@ Let's write some code
 
 * Analytic geometry !
 - Create PolarPoint Structure
+
+* Slices and Array
+- Arrays
+.play src/arrays.go
+
+* Slices and Array
+- Slices
+
+	[]T  // slice of T
+
+- Descriptor for an underlying array segment
+- May grow and shrink
+- Has length and capacity
+- Assigning a slice copies the descriptor, not the underlying array
+
+Common slice operations:
+
+	len(s)
+	s[i]
+	s[i:j]
+	append(s, x)  // append element x to slice s and return new slice
+
+- Slices play the role of dynamically sized arrays
+- Widely used in Go code
