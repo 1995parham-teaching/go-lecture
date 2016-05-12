@@ -10,12 +10,14 @@ http://1995parham.me/
 * Outline
 - The Go programming language
 - Hello, World!
+- Statements
 - The GoLang concepts [Values]
 - Prime, or Not Prime
 - The GoLang concepts [Functions]
 - The GoLang concepts [Structures]
 - The GoLang concepts [Interfaces]
 - The GoLang concepts [Casting Types]
+- Analytic geometry !
 
 
 * The Go programming language
@@ -44,6 +46,44 @@ Designed by programmers for programmers!
 - Package Statements
 - Imported Packages
 - ....
+
+* Statements
+
+- Curly braces (C style)
+- Multiple assignments and some other new constructs
+- Statements are _not_ Expressions.
+- Many cleanups: mandatory braces, no parentheses for conditionals, implicit break in switches, no semicolons, etc.
+	a, b = b, a                 // swap
+	f, err = os.Open(filename)
+
+	if x < y {
+		return x
+	} else {
+		return y
+	}
+
+	switch day {
+	case Mon:
+		...
+		// break is implicit
+	case Tue, Wed:
+		...
+	}
+
+* Statements, continued
+
+- Unified `for` syntax
+
+	for {
+		// loop forever
+	}
+
+`range` over arrays, slices, and maps
+
+	for i, num := range numbers { ... }
+	for city, pop := range population { ... }
+
+Not shown: break, goto, continue, fallthrough
 
 * The GoLang concepts [Values]
 
@@ -84,4 +124,10 @@ Let's write some code
 - Create PolarPoint Structure
 
 * Analytic geometry !
+- Create Point Interface
 
+* Analytic geometry !
+- Create CatesianPoint Structure
+
+* Analytic geometry !
+- Create PolarPoint Structure
