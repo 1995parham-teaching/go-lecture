@@ -197,6 +197,11 @@ Common slice operations:
 
 * Concurrency
 
+* Outline
+
+- Goroutines
+- Communication via channels
+
 * Goroutines
 
 - The _go_ statement launches a function call as a goroutine
