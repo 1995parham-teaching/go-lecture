@@ -56,3 +56,6 @@ The `new()` built-in function creates a new integer and returns a pointer to it.
 - Data hiding
 - `S1`, `S2`, `S3` are public and can be accessed from anywhere.
 - `private` is private and is only visible to code in the same package.
+
+* The GoLang concepts [Methods]
+.play src/methods.go
