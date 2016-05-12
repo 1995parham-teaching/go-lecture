@@ -7,19 +7,6 @@ Parham Alvani
 parham.alvani@gmail.com
 http://1995parham.me/
 
-* Outline
-- The Go programming language
-- Hello, World!
-- Statements
-- The GoLang concepts [Values]
-- Prime, or Not Prime
-- The GoLang concepts [Functions]
-- The GoLang concepts [Structures]
-- The GoLang concepts [Interfaces]
-- The GoLang concepts [Casting Types]
-- Analytic geometry !
-
-
 * The Go programming language
 
 - Modern
@@ -38,6 +25,22 @@ Designed by programmers for programmers!
 
 .image img/gopher.png
 .caption gopher :D
+
+* GoLang Concepts
+
+* Outline
+
+- The Go programming language
+- Hello, World!
+- Statements
+- The GoLang concepts [Values]
+- Prime, or Not Prime
+- The GoLang concepts [Functions]
+- The GoLang concepts [Structures]
+- The GoLang concepts [Interfaces]
+- The GoLang concepts [Casting Types]
+- Analytic geometry !
+- Slices and Arrays
 
 * Hello, World!
 
