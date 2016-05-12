@@ -1,9 +1,10 @@
 package main
 
 type Sample struct {
-	S1 int
-	S2 int
-	S3 string
+	S1      int
+	S2      int
+	S3      string
+	private float64
 }
 
 func main() {
