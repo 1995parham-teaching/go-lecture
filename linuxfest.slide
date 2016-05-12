@@ -38,3 +38,6 @@ Designed by programmers for programmers!
 
 .play src/values.go
 The `new()` built-in function creates a new integer and returns a pointer to it.
+
+* Prime, or Not Prime
+.play src/prime.go
