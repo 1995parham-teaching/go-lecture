@@ -52,3 +52,7 @@ The `new()` built-in function creates a new integer and returns a pointer to it.
 
 * The GoLang concepts [Structures]
 .play src/structures.go
+- C Structures :D
+- Data hiding
+- `S1`, `S2`, `S3` are public and can be accessed from anywhere.
+- `private` is private and is only visible to code in the same package.
