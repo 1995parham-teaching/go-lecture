@@ -10,7 +10,10 @@ http://1995parham.me/
 * Outline
 - The Go programming language
 - Hello, World!
-- The GoLang concepts
+- The GoLang concepts [Values]
+- Prime, or Not Prime
+- The GoLang concepts [Structures]
+
 
 * The Go programming language
 
@@ -46,3 +49,6 @@ The `new()` built-in function creates a new integer and returns a pointer to it.
 
 * Prime, or Not Prime
 .play src/prime.go
+
+* The GoLang concepts [Structures]
+.play src/structures.go
