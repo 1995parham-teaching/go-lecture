@@ -26,6 +26,11 @@ http://1995parham.me/
 
 Designed by programmers for programmers!
 
+* The Go programming language
+
+.image img/gopher.png
+.caption gopher :D
+
 * Hello, World!
 
 .play src/hello.go
