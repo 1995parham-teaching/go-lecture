@@ -6,9 +6,9 @@ and my presentation slides at the 8th Amirkabir Linux Festival 2016.
 Use the golang present tool
 ```shell
 # setup GOPATH before running this: https://golang.org/doc/code.html#GOPATH
-go get github.com/golang/tools/cmd/present
+go get github.com/LinuxFest/present-plus
 cd /path/to/this/slide
-$GOPATH/bin/present
+$GOPATH/bin/present-plus
 ```
 ## Outline
 * Introduction to GoLang
