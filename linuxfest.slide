@@ -126,14 +126,14 @@ Not shown: break, goto, continue, fallthrough
 
 * The GoLang concepts [Values]
 
-.play src/values.go
+.play -highlight src/values.go
 The `new()` built-in function creates a new integer and returns a pointer to it.
 
 * Prime, or Not Prime
-.play src/prime.go
+.play -highlight src/prime.go
 
 * The GoLang concepts [Functions]
-.play src/functions.go
+.play -highlight src/functions.go
 
 * The GoLang concepts [Structures]
 .play src/structures.go
