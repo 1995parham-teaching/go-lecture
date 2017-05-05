@@ -3,9 +3,9 @@ Amirkabir University of Technology Linux Festival
 05 May 2017
 
 
-Parham Alvani
+Parham Alvani @1995parham
 parham.alvani@gmail.com
-http://1995parham.me/
+http://1995parham.github.io/
 
 * The Go programming language
 
@@ -44,7 +44,7 @@ Designed by programmers for programmers!
 
 * Hello, World!
 
-.play src/hello.go
+.play -highlight src/hello.go
 
 - Package Statements
 - Imported Packages
