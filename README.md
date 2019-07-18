@@ -1,16 +1,13 @@
 # Go101
+> In the memory of our friends who are not among us right now
+
 ## Introduction
-This repository contains some sample codes for GoLang
-and my presentation slides at the 8th Amirkabir Linux Festival 2016.
-## How to see this
-Use the golang present tool
-```shell
-# setup GOPATH before running this: https://golang.org/doc/code.html#GOPATH
-go get github.com/LinuxFest/present-plus
-cd /path/to/this/slide
-$GOPATH/bin/present-plus
-```
+
+This repository contains sample codes and slides (see `gh-pages`) for introducing people to Go.
+There is no assumption about the audience background but its good to have C background to learning Go.
+
 ## Outline
+
 * Introduction to GoLang
 * The Go Programming Language
     * Program Elements
@@ -32,3 +29,9 @@ $GOPATH/bin/present-plus
 * Miscellaneous
     * Go Tools
     * Beehive
+
+## Presented in
+
+- 8th Linux Festival - 2016
+- 9th Linux Festival - 2017
+- Amirkabir University of Tech. Foreign Students Workshop - 2019
