@@ -13,13 +13,13 @@ There is no assumption about the audience background but its good to have C back
     * Program Elements
     * Constants
     * Variables
+    * Statements
+    * Functions
     * Types
     * Types Declaration
     * Slices
     * Pointers
     * Maps
-    * Statements
-    * Functions
     * Method
     * Interface Types
     * Packages
