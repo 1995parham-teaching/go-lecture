@@ -7,27 +7,8 @@ C background is **required** for learning Go.
 
 ## Outline
 
-* Introduction to GoLang
-* The Go Programming Language
-    * Program Elements
-    * Constants
-    * Variables
-    * Statements
-    * Functions
-    * Types
-    * Types Declaration
-    * Slices
-    * Pointers
-    * Maps
-    * Method
-    * Interface Types
-    * Packages
-* Concurrency
-    * GoRoutine
-    * Channels
-* Miscellaneous
-    * Go Tools
-    * Beehive
+1. Hello World
+2. Constants and Variables
 
 ## Presented in
 Beside the Ineternet Engineering course it presented in the following events:
