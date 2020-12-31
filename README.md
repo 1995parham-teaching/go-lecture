@@ -7,8 +7,12 @@ C background is **required** for learning Go.
 
 ## Outline
 
-1. Hello World
-2. Constants and Variables
+0. Hello World
+1. Constants and Variables
+2. Calculation
+3. Conditions
+4. Loops
+5. Strings
 
 ## Presented in
 Beside the Ineternet Engineering course it presented in the following events:
