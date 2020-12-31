@@ -1,10 +1,9 @@
 # Go101
-> In the memory of our friends who are not among us right now
 
 ## Introduction
 
-This repository contains sample codes and slides (see `gh-pages`) for introducing people to Go.
-There is no assumption about the audience background but its good to have C background to learning Go.
+This repository contains sample codes for introducing people to Go.
+C background is **required** for learning Go.
 
 ## Outline
 
@@ -31,6 +30,7 @@ There is no assumption about the audience background but its good to have C back
     * Beehive
 
 ## Presented in
+Beside the Ineternet Engineering course it presented in the following events:
 
 - 8th Linux Festival - 2016
 - 9th Linux Festival - 2017
