@@ -1,4 +1,4 @@
-# Go101
+# Learning Go in IE
 
 ## Introduction
 
