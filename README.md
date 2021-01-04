@@ -8,7 +8,7 @@ C background is **required** for learning Go.
 ## Outline
 
 #### Go
- 
+
 0. Hello World
 1. Constants and Variables
 2. Calculation
@@ -43,6 +43,7 @@ C background is **required** for learning Go.
 2. Request Binding
 
 ## Presented in
+
 Beside the Ineternet Engineering course it presented in the following events:
 
 - 8th Linux Festival - 2016
