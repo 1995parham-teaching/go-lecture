@@ -26,4 +26,8 @@ func main() {
 	for index, value := range b {
 		fmt.Printf("b[%d] = %d\n", index, value)
 	}
+
+	// n := 10
+	// var c [n]int
+	// compile error, arrays' length must be constant
 }
