@@ -31,5 +31,4 @@ func main() {
 
 	fmt.Printf("%g\n", math.Sin(math.Pi))
 	fmt.Printf("%f\n", math.Sin(math.Pi*0.5))
-
 }
