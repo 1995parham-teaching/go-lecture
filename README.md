@@ -25,22 +25,22 @@ C background is **required** for learning Go.
 13. Function with multiple-return
 14. Errors
 15. Range
-16. Pointers
-17. Pointer Recievers
-18. Concurrency
-19. Function Type
-20. Channels
-21. Pipelines
-22. Select
-23. JSON
-24. go.mod
-25. Packages
+16. Concurrency
+17. Function Type
+18. Channels
+19. Pipelines
+20. Select
+21. JSON
+22. go.mod
+23. Packages
 
 #### Echo
 
 0. Hello Echo
 1. Echo Handlers
 2. Request Binding
+3. Path Parameters
+4. Query Strings
 
 ## Presented in
 
