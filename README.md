@@ -24,15 +24,14 @@ C background is **required** for learning Go.
 12. Casts and Strconv
 13. Function with multiple-return
 14. Errors
-15. Range
-16. Concurrency
-17. Function Type
-18. Channels
-19. Pipelines
-20. Select
-21. JSON
-22. go.mod
-23. Packages
+15. Concurrency
+16. Function Type
+17. Channels
+18. Pipelines
+19. Select
+20. JSON
+21. go.mod
+22. Packages
 
 #### Echo
 
