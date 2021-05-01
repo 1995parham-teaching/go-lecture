@@ -7,6 +7,9 @@ C background is **required** for learning Go.
 
 ## Outline
 
+Go in the IE course consists of two major parts. one part is about Go itset and another part is Echo http server.
+Reviewing these source codes are useful for learning Go but their aren't enough.
+
 #### Go
 
 0. Hello World
