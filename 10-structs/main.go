@@ -8,7 +8,7 @@ type Student struct {
 	age    int
 }
 
-func (s *Student) String() string {
+func (s Student) String() string {
 	return fmt.Sprintf("Name: %s, Family: %s, age: %d", s.Name, s.Family, s.age)
 }
 
