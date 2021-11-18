@@ -43,11 +43,3 @@ Reviewing these source codes are useful for learning Go but their aren't enough.
 2. Request Binding
 3. Path Parameters
 4. Query Strings
-
-## Presented in
-
-Beside the Ineternet Engineering course it presented in the following events:
-
-- 8th Linux Festival - 2016
-- 9th Linux Festival - 2017
-- Amirkabir University of Tech. Foreign Students Workshop - 2019
