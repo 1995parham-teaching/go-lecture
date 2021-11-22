@@ -9,6 +9,7 @@ func main() {
 	s3 := "سلام دنیا"
 
 	fmt.Printf("%d (len(s3)) != 9\n", len(s3))
+	fmt.Println([]byte(s3))
 
 	fmt.Println(s1[0])
 	fmt.Println(s2)

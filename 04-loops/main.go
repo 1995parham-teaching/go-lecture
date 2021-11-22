@@ -5,6 +5,7 @@ import "fmt"
 func GCD(n, m int) int {
 	for n%m != 0 {
 		n, m = m, n%m
+		// a, b = b, a
 	}
 
 	return m

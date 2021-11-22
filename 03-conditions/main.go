@@ -18,6 +18,8 @@ func main() {
 	switch n {
 	case 10:
 		fmt.Printf("n is equal to 10!\n")
+		// uncomment the following line to see what happen
+		// fallthrough
 	case 11:
 		fmt.Printf("in c this statement will be run but here?\n")
 	default:
