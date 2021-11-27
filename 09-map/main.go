@@ -43,6 +43,5 @@ func main() {
 	opinion, ok := opinions["Hesam"]
 	if ok {
 		fmt.Printf("opinions[%s] = %v\n", "Hesam", opinion)
-
 	}
 }
