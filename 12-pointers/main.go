@@ -2,10 +2,12 @@ package main
 
 import "fmt"
 
+// invalid swap because it cannot change its arguments.
 func swap(a, b int) {
 	a, b = b, a
 }
 
+// valid swap because of call by reference.
 func swapWithPointer(a, b *int) {
 	*a, *b = *b, *a
 }
