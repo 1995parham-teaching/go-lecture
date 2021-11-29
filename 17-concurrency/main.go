@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+
 	go func() {
 		fmt.Println("chan-2")
 	}()
@@ -10,6 +11,7 @@ func main() {
 	fmt.Println("chan-1")
 
 	// block until goroutine execuation
+	// everything will be killed when main died
 	for {
 	}
 }

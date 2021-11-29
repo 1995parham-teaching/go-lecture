@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	ch := make(chan int)
+	// make(chan int, 10) with 10 rooms
+	ch := make(chan int) // with 0 room
 
 	go func() {
 		for i := 0; i < 10; i++ {
