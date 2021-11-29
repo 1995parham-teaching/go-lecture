@@ -24,17 +24,19 @@ Reviewing these source codes are useful for learning Go but their aren't enough.
 9. Maps
 10. Structs
 11. Interfaces
-12. Casts and Strconv
-13. Function with multiple-return
-14. Errors
-15. Concurrency
-16. Function Type
-17. Channels
-18. Pipelines
-19. Select
-20. JSON
-21. go.mod
-22. Packages
+12. Pointers
+13. Structs with Pointers
+14. strconv
+15. Function with multiple-return
+16. Errors
+17. Concurrency
+18. Function Type
+19. Channels
+20. Pipelines
+21. Select
+22. JSON
+23. go.mod
+24. Packages
 
 #### Echo
 
