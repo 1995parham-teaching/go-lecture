@@ -3,7 +3,6 @@ package main
 import (
 	"errors"
 	"fmt"
-	"math/rand"
 	"strconv"
 )
 
@@ -13,6 +12,7 @@ import (
 // }
 //
 // when there is no implementation behind an interface, it will be nil.
+// so we will check err with nil.
 
 type MyError1 struct {
 	Message string
@@ -34,9 +34,7 @@ func toNumber(s string) int {
 	return int(i)
 }
 
-func iReturnError() (int, error) {
-	n := rand.Int()
-
+func iReturnError(n int) (int, error) {
 	if n%2 == 0 {
 		return 0, MyError1{
 			Message: "Hello, I am error number 1",
@@ -47,8 +45,9 @@ func iReturnError() (int, error) {
 	return 1, MyError2
 }
 
-func iReturnErrorError() error {
-	_, err := iReturnError()
+// iReturnErrorError calls iReturnError and wraps its error.
+func iReturnErrorError(n int) error {
+	_, err := iReturnError(n)
 	if err != nil {
 		return fmt.Errorf("from iReturnErrorError %w", err)
 	}
@@ -61,13 +60,23 @@ func main() {
 	fmt.Println(toNumber("abc"))
 	fmt.Println(toNumber("123abc"))
 
-	// why MyError2 without {} but MyError1 with {}
-	fmt.Println(errors.Is(iReturnErrorError(), MyError2))
-	fmt.Println(errors.Is(iReturnErrorError(), MyError1{}))
+	// why MyError2 without {} but MyError1 with {}.
+	// also pay attention to the error parameters because they also must be equal.
+	// the reason behind this is because of the way that we write Error method.
+	fmt.Printf("iReturnErrorError(1) is MyError2? %t\n", errors.Is(iReturnErrorError(1), MyError2))
+	fmt.Printf("iReturnErrorError(0) is MyError1? %t\n", errors.Is(iReturnErrorError(0), MyError1{
+		Message: "Hello, I am error number 1",
+		Number:  0,
+	}))
+	fmt.Printf("iReturnErrorError(2) is MyError1? %t\n", errors.Is(iReturnErrorError(2), MyError1{
+		Message: "Hello, I am error number 1",
+		Number:  0,
+	}))
 
+	// parses the returned error from iReturnErrorError as MyError1
+	// so we can get access to its details.
 	myError1 := new(MyError1)
-	if ok := errors.As(iReturnErrorError(), myError1); ok {
-		fmt.Println(myError1.Message)
-		fmt.Println(myError1.Number)
+	if ok := errors.As(iReturnErrorError(0), myError1); ok {
+		fmt.Printf("we have MyError1 from iReturnErrorError (%s, %d)\n", myError1.Message, myError1.Number)
 	}
 }
