@@ -1,8 +1,10 @@
 package main
 
 import (
+	"log"
+
 	"github.com/labstack/echo/v4"
-	"github.com/sbu-ce/ie-with-go/echo/handler"
+	"github.com/cng-by-example/hello-go/echo/handler"
 )
 
 func main() {
@@ -18,5 +20,7 @@ func main() {
 
 	e.GET("/hello/:username", h.User)
 
-	e.Start("0.0.0.0:1373")
+	if err := e.Start("0.0.0.0:1373"); err != nil {
+		log.Fatal(err)
+	}
 }
