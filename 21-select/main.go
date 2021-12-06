@@ -33,9 +33,9 @@ func main() {
 		log.Println(3)
 	default:
 		// other cases must have results in the moment or the default case will be exectued
-		log.Println("Failed")
+		log.Println("failed")
 		return
 	}
 
-	log.Println("Success")
+	log.Println("success")
 }
