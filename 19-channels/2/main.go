@@ -10,6 +10,8 @@ func main() {
 
 	go func() {
 		fmt.Println("I am going to write on channel")
+		fmt.Println("I am still going to write on channel")
+		time.Sleep(time.Second)
 		ch <- 10
 		fmt.Println("I am done")
 		close(ch)

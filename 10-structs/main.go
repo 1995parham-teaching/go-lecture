@@ -17,6 +17,8 @@ func New(name, family string, age int) Student {
 	}
 }
 
+func (Student) Nothing() {}
+
 // String returns the string for printing by %v or Println.
 func (s Student) String() string {
 	return fmt.Sprintf("Name: %s, Family: %s, age: %d", s.Name, s.Family, s.age)

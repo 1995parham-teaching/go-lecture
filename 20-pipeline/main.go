@@ -48,4 +48,5 @@ func main() {
 	close(ch)
 
 	// how we can wait for processors to quit?
+	time.Sleep(time.Second)
 }

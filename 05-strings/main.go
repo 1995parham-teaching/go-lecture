@@ -16,8 +16,8 @@ func main() {
 	fmt.Println(s3[1])
 	fmt.Printf("%c\n", s3[1])
 
-	for _, c := range s3 {
-		fmt.Printf("%c ", c)
+	for i, c := range s3 {
+		fmt.Printf("[%d]: %c ", i, c)
 	}
 
 	fmt.Println()
