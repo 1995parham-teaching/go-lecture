@@ -2,14 +2,6 @@ package main
 
 import "fmt"
 
-func Fibonacci(n int) int {
-	if n == 0 || n == 1 {
-		return 1
-	}
-
-	return Fibonacci(n-1) + Fibonacci(n-2)
-}
-
 func main() {
 	const n = 10
 
@@ -25,4 +17,12 @@ func main() {
 	default:
 		fmt.Println("this should not happen")
 	}
+}
+
+func Fibonacci(n int) int {
+	if n == 0 || n == 1 {
+		return 1
+	}
+
+	return Fibonacci(n-1) + Fibonacci(n-2)
 }
