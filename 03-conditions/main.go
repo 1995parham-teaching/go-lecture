@@ -14,6 +14,7 @@ func main() {
 		// fallthrough
 	case 11:
 		fmt.Printf("in c this statement will be run but here?\n")
+		// fallthrough
 	default:
 		fmt.Println("this should not happen")
 	}
