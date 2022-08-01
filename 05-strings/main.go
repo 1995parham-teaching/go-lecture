@@ -20,5 +20,8 @@ func main() {
 		fmt.Printf("[%d]: %c ", i, c)
 	}
 
+	// s3[1] = 10
+	// cannot assign to s3[1] (value of type byte)
+
 	fmt.Println()
 }

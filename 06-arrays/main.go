@@ -33,4 +33,7 @@ func main() {
 	// n := 10
 	// var c [n]int
 	// compile error, arrays' length must be constant
+
+	// b[10] = 1
+	// invalid argument: array index 10 out of bounds [0:4]
 }

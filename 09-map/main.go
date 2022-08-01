@@ -5,6 +5,7 @@ import "fmt"
 func main() {
 	var m map[int]string
 	m = make(map[int]string)
+	// m := make(map[int]string)
 
 	m[10] = "Hello"
 	m[1373] = "Parham"
