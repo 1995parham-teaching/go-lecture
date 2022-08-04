@@ -48,4 +48,14 @@ func main() {
 	if !ok {
 		fmt.Println("p is not a person")
 	}
+
+	// type switch
+	switch v := p.(type) {
+	case Person:
+		fmt.Printf("I am a person with name equals to %s\n", v.Name)
+	case Student:
+		fmt.Println(v.Hello())
+	default:
+		fmt.Println("unknown")
+	}
 }
