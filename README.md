@@ -7,10 +7,11 @@ C background is **required** for learning Go.
 
 ## Outline
 
-Go in the IE course consists of two major parts. one part is about Go itset and another part is Echo http server.
+Go in the IE course consists of two major parts.
+one part is about Go itset and another part is Echo http server.
 Reviewing these source codes are useful for learning Go but their aren't enough.
 
-#### Go
+### Go
 
 0. Hello World
 1. Constants and Variables
@@ -38,7 +39,7 @@ Reviewing these source codes are useful for learning Go but their aren't enough.
 23. go.mod
 24. Packages
 
-#### Echo
+### Echo
 
 0. Hello Echo
 1. Echo Handlers
