@@ -8,6 +8,9 @@ import (
 type Student struct {
 	Name   string `json:"name"`
 	Family string `json:"family"`
+	// use the following definition for age to see what happens.
+	// Age    *int   `json:"age"`
+	Age int `json:"age"`
 }
 
 func main() {
@@ -22,11 +25,19 @@ func main() {
 	}
 	fmt.Println(string(b))
 
-	str := "{\"name\": \"parham\"}"
+	str1 := "{\"name\": \"parham\"}"
 	var s1 Student
 
-	if err := json.Unmarshal([]byte(str), &s1); err != nil {
+	if err := json.Unmarshal([]byte(str1), &s1); err != nil {
 		fmt.Println(err)
 	}
 	fmt.Println(s1)
+
+	str2 := "{\"name\": \"parham\", \"family\": \"\", \"age\": 0}"
+	var s2 Student
+
+	if err := json.Unmarshal([]byte(str2), &s2); err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(s2)
 }
