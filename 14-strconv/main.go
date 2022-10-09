@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	var s = "1230"
+	s := "1230"
 	a := 10
 
 	i, _ := strconv.ParseInt(s, 10, 32)
