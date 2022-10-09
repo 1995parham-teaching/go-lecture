@@ -14,6 +14,14 @@ import (
 // when there is no implementation behind an interface, it will be nil.
 // so we will check err with nil.
 
+type MyError3 struct {
+	LastError error
+}
+
+func (me MyError3) Unwrap() error {
+	return me.LastError
+}
+
 type MyError1 struct {
 	Message string
 	Number  int
@@ -75,6 +83,7 @@ func main() {
 
 	// parses the returned error from iReturnErrorError as MyError1
 	// so we can get access to its details.
+	// myError1 := &MyError1{}
 	myError1 := new(MyError1)
 	if ok := errors.As(iReturnErrorError(0), myError1); ok {
 		fmt.Printf("we have MyError1 from iReturnErrorError (%s, %d)\n", myError1.Message, myError1.Number)
