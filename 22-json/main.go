@@ -9,7 +9,7 @@ type Student struct {
 	Name   string `json:"name"`
 	Family string `json:"family"`
 	// use the following definition for age to see what happens.
-	// Age    *int   `json:"age"`
+	// Age *int `json:"age"`
 	Age int `json:"age"`
 }
 
