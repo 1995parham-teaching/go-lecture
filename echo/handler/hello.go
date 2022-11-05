@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/1995parham-teaching/hello-go/echo/request"
 	"github.com/labstack/echo/v4"
-	"github.com/cng-by-example/hello-go/echo/request"
 )
 
 type Hello struct {
