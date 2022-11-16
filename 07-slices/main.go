@@ -2,19 +2,25 @@ package main
 
 import "fmt"
 
-// slice s:
-// capacity: 5
-// array: [ | | | | ]
-// size: 2
-// s[0] = 0, s[1] = 1
-// array: [0|1| | | ]
-// s = append(s, 10)
-// size: 3
-// array: [0|1|10| | ]
-// s = append(s, 20)
-// capacity: 10
-// size: 4
-// array: [0|1|10|20| | | | | ..]
+/*
+working with slice s:
+
+capacity: 5
+array: [ | | | | ]
+size: 2
+s[0] = 0, s[1] = 1
+array: [0|1| | | ]
+
+s = append(s, 10)
+size: 3
+array: [0|1|10| | ]
+
+s = append(s, 20)
+capacity: 10
+size: 4
+array: [0|1|10|20| | | | | ..]
+
+*/
 
 func main() {
 	s1 := make([]int, 10)
@@ -39,4 +45,17 @@ func main() {
 	s2 = append(s2, 10)
 
 	fmt.Printf("s2: %+v, len(s2): %d, cap(s2): %d\n", s2, len(s2), cap(s2))
+
+	// expanding slice with append in action
+	s := make([]int, 10, 10)
+
+	fmt.Println("before appending a new variable into s")
+	fmt.Printf("address of s is %p\n", &s)
+	fmt.Printf("address of s[0] is %p\n", &s[0])
+
+	s = append(s, 15)
+
+	fmt.Println("after appending a new variable into s")
+	fmt.Printf("address of s is %p\n", &s)
+	fmt.Printf("address of s[0] is %p\n", &s[0])
 }
