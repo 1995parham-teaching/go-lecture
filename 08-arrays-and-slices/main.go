@@ -37,7 +37,7 @@ func main() {
 	// fmt.Printf("invalid access to slice \"s4[3]\": %d", s4[3])
 
 	// compile error: invalid array index 3 (out of bounds for 3-element array)
-	// fmt.Printf("invalid access to slice \"a1[3]\": %d", a1[3])
+	// fmt.Printf("invalid access to array \"a1[3]\": %d", a1[3])
 
 	fmt.Printf("s4[1:]: %v\n", s4[1:])
 }
