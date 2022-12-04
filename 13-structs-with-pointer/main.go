@@ -34,6 +34,9 @@ func main() {
 		Age:  27,
 	}
 
+	var _ fmt.Stringer = p
+	var _ fmt.Stringer = &p
+
 	fmt.Println(p)
 
 	p.BeOlder(1)
