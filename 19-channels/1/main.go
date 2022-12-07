@@ -14,6 +14,8 @@ func main() {
 		// if you forget closing the channel it causes deadlock
 		close(ch)
 	}()
+	// you can read from a channel with
+	// i := <-ch
 
 	for i := range ch {
 		fmt.Println(i)
