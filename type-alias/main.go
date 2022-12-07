@@ -2,17 +2,17 @@ package main
 
 import "fmt"
 
-type hello = int
+type t1 = int
 
-type hi int
+type t2 int
 
 func main() {
-	var h1 hi = 10
+	var h1 t2 = 10
 	fmt.Println(h1)
 	// typecheck: cannot use h1 (variable of type hi) as int value in variable declaration
 	// var _ int = h1
 
-	var h2 hello = 10
+	var h2 t1 = 10
 	fmt.Println(h2)
 	var _ int = h2
 }
