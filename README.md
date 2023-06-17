@@ -7,7 +7,7 @@ Learn to develop cloud-native programs with Go!
 ## Review Me
 
 One of the main steps in learning new language and its best practices is reviewing
-writeen projects:
+written projects:
 
 - <https://github.com/1995parham/koochooloo>:
 
@@ -19,16 +19,16 @@ writeen projects:
 
 - <https://github.com/1995parham/fandogh>:
 
-  - This example containing the migration and how we store things on database
+  - This example containing the migration and how we store things on the [MongoDB](https://www.mongodb.com/) database.
 
 - <https://github.com/1995parham/saf>:
 
-  - This example shows tracing in action with nats as a message queue
-  - also, it contains a pyroscope to see how replacing echo with gofiber increase the performance
-  - this project has helm and after knowing Kubernetes basis they can lunch it on the cloud with its helm
+  - This example shows tracing in action with [NATS](https://nats.io/) as a message queue.
+  - Also, We can use profiler to see how replacing [Echo](https://echo.labstack.com/) with [GoFiber](https://gofiber.io/) increase the performance.
+  - This project has Helm chart and after knowing Kubernetes basis we can lunch it on the cloud with its Helm.
 
 - <https://github.com/1995parham/k1s>:
-  - in the first step, they review the server structure. the server is stateless and only returns simple responses.
-  - they lunch it on the cloud with its manifests
+  - In the first step, we review the server structure. The server is stateless and only returns simple responses.
+  - We it on the cloud with its manifests
   - using server and ingress to send requests and see how they distributed between instances
-  - they also see how we can mount configuration on Kubernetes with configmap.
+  - We also see how we can mount configuration on Kubernetes with [configmap](https://kubernetes.io/docs/concepts/configuration/configmap/).
