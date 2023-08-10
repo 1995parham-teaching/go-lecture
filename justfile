@@ -4,9 +4,11 @@ default:
 # build steps
 build:
     #!/usr/bin/env bash
-    set -euxo pipefail
+    set -euo pipefail
     for step in $(find . -maxdepth 1 -type d -name '[!.]*'); do
-      cd $step
-      go build -o main.out || echo "$step: failed to compile"
-      cd -
+      echo "*** $step ***"
+      echo "*************"
+      cd $step &> /dev/null
+      go build -o main.out || true
+      cd - &> /dev/null
     done
