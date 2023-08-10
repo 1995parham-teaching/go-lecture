@@ -1,5 +1,9 @@
 <h1 align="center"> Learning Go for Internet Engineering </h1>
 
+<p align="center">
+  <img alt="banner" src="./.github/assets/banner.jpg" height="200px" />
+</p>
+
 ## Introduction
 
 This repository contains sample codes for introducing people to Go.
@@ -7,9 +11,9 @@ C background is **required** for learning Go.
 
 ## Outline
 
-Go in the IE course consists of two major parts.
-one part is about Go itset and another part is Echo http server.
-Reviewing these source codes are useful for learning Go but their aren't enough.
+Using Go for design and implementing servers contains two major steps.
+First is about learning Go itself and another step is learning an HTTP framework (here we go with Echo).
+Reviewing these source codes are useful for learning Go but there aren't enough.
 
 ### Go
 
