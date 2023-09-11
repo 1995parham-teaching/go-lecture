@@ -50,3 +50,7 @@ Reviewing these source codes are useful for learning Go but there aren't enough.
 2. Request Binding
 3. Path Parameters
 4. Query Strings
+
+## Continue your journey
+
+You can visit [go101](https://github.com/1995parham-learning/go101) which contains some more advance concepts of Golang.
