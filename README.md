@@ -31,7 +31,7 @@ Reviewing these source codes are useful for learning Go but there aren't enough.
 11. Interfaces
 12. Pointers
 13. Structs with Pointers
-14. strconv
+14. `strconv`
 15. Function with multiple-return
 16. Errors
 17. Concurrency
@@ -40,13 +40,13 @@ Reviewing these source codes are useful for learning Go but there aren't enough.
 20. Pipelines
 21. Select
 22. JSON
-23. go.mod
+23. `go.mod`
 24. Packages
 
 ### Echo
 
-0. Hello Echo
-1. Echo Handlers
+0. Say hello to Echo
+1. HTTP Handlers
 2. Request Binding
 3. Path Parameters
 4. Query Strings
