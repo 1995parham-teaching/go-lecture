@@ -14,24 +14,26 @@ import (
 // when there is no implementation behind an interface, it will be nil.
 // so we will check err with nil.
 
-type MyError3 struct {
+type My3Error struct {
 	LastError error
 }
 
-func (me MyError3) Unwrap() error {
+func (me My3Error) Unwrap() error {
 	return me.LastError
 }
 
-type MyError1 struct {
+type My1Error struct {
 	Message string
 	Number  int
 }
 
-func (me MyError1) Error() string {
+func (me My1Error) Error() string {
 	return fmt.Sprintf("%s: %d", me.Message, me.Number)
 }
 
-var MyError2 = errors.New("I am Error 2")
+// errors should prefix with Err when they are created with
+// errors.New() and they are not structure.
+var ErrMy2 = errors.New("i am error 2")
 
 func toNumber(s string) int {
 	i, err := strconv.ParseInt(s, 10, 32)
@@ -44,13 +46,13 @@ func toNumber(s string) int {
 
 func iReturnError(n int) (int, error) {
 	if n%2 == 0 {
-		return 0, MyError1{
+		return 0, My1Error{
 			Message: "Hello, I am error number 1",
 			Number:  n,
 		}
 	}
 
-	return 1, MyError2
+	return 1, ErrMy2
 }
 
 // iReturnErrorError calls iReturnError and wraps its error.
@@ -71,12 +73,12 @@ func main() {
 	// why MyError2 without {} but MyError1 with {}.
 	// also pay attention to the error parameters because they also must be equal.
 	// the reason behind this is because of the way that we write Error method.
-	fmt.Printf("iReturnErrorError(1) is MyError2? %t\n", errors.Is(iReturnErrorError(1), MyError2))
-	fmt.Printf("iReturnErrorError(0) is MyError1? %t\n", errors.Is(iReturnErrorError(0), MyError1{
+	fmt.Printf("iReturnErrorError(1) is MyError2? %t\n", errors.Is(iReturnErrorError(1), ErrMy2))
+	fmt.Printf("iReturnErrorError(0) is MyError1? %t\n", errors.Is(iReturnErrorError(0), My1Error{
 		Message: "Hello, I am error number 1",
 		Number:  0,
 	}))
-	fmt.Printf("iReturnErrorError(2) is MyError1? %t\n", errors.Is(iReturnErrorError(2), MyError1{
+	fmt.Printf("iReturnErrorError(2) is MyError1? %t\n", errors.Is(iReturnErrorError(2), My1Error{
 		Message: "Hello, I am error number 1",
 		Number:  0,
 	}))
@@ -84,7 +86,7 @@ func main() {
 	// parses the returned error from iReturnErrorError as MyError1
 	// so we can get access to its details.
 	// myError1 := &MyError1{}
-	myError1 := new(MyError1)
+	myError1 := new(My1Error)
 	if ok := errors.As(iReturnErrorError(0), myError1); ok {
 		fmt.Printf("we have MyError1 from iReturnErrorError (%s, %d)\n", myError1.Message, myError1.Number)
 	}
