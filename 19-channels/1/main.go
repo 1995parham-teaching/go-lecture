@@ -11,7 +11,10 @@ func main() {
 			ch <- i
 		}
 
-		// if you forget closing the channel it causes deadlock
+		// if you forget to close the channel it causes deadlock.
+		// by closing the channel you let Golang to garbage collect it
+		// so it if there is anything remaining in the buffered channel it could be
+		// removed soon.
 		close(ch)
 	}()
 	// you can read from a channel with
