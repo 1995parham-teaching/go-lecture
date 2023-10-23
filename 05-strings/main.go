@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+// g defined as a global constant variable,
+// which is added into binary output .rodata section.
+// > strings 05-strings | grep "Global"
+const g = "Global string is which defined"
+
 func main() {
 	var s1 string = "Hello World"
 
@@ -20,8 +25,16 @@ func main() {
 		fmt.Printf("[%d]: %c ", i, c)
 	}
 
+	// you can assign a new string
+	// into a string variable.
+	s1 = "New Hello World"
+
 	// s3[1] = 10
 	// cannot assign to s3[1] (value of type byte)
 
 	fmt.Println()
+
+	// comment out the following line and then you cannot find
+	// the string into the compiled binary.
+	fmt.Println(g)
 }
