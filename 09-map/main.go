@@ -45,4 +45,12 @@ func main() {
 	if ok {
 		fmt.Printf("opinions[%s] = %v\n", "Hesam", opinion)
 	}
+
+	delete(opinions, "Parham")
+	delete(opinions, "Parham")
+
+	_, ok = opinions["Parham"]
+	if !ok {
+		fmt.Printf("opinions[%s] does not exist\n", "Parham")
+	}
 }

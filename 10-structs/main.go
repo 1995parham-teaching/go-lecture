@@ -6,6 +6,9 @@ type Student struct {
 	Name   string
 	Family string
 	age    int
+
+	// uncomment the following line to remove the comparablity.
+	// justForFun []int
 }
 
 // New is a popular pattern to create types
@@ -35,6 +38,11 @@ func main() {
 		Name:   "Parham",
 		Family: "Alvani",
 		age:    27,
+	}
+
+	newS := s
+	if newS == s {
+		fmt.Println("we can compare student structs")
 	}
 
 	fmt.Println(s)
