@@ -15,6 +15,32 @@ Among the tools that have been developed with this language are:
 
 In the last few years, this language has opened its place in Iranian companies and it is used for the development of backend services.
 
+## Headings
+
+- History
+- Variables and constants
+- Calculation
+- Conditions
+- Loops
+- Functions
+- Strings
+- Arrays and slices
+- `map`
+- `struct`
+- `interface`
+- Pointers
+- Errors
+- Concurrency and channels
+- `select`
+- `go mod` and using packages
+- An overview of advanced features
+- Introduction to HTTP protocol
+- HTTP server implementation
+- Settings management paragraph
+- Metric, Log and Tracing
+- connection with the database using PostgreSQL and GORM
+- Introduction to Docker and containerization
+
 ## Review Me
 
 One of the main steps in learning new language and its best practices is reviewing
