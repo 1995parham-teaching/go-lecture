@@ -2,7 +2,18 @@
 
 ## Introduction
 
-Learn to develop cloud-native programs with Go!
+> Learn to develop cloud-native programs with Go!
+
+The Golang programming language is very similar to the C programming language, and its purpose is to reduce complexity in program development.
+This language is widely used to implement web servers, applications, and container management tools.
+Among the tools that have been developed with this language are:
+
+- [Kubernetes](https://github.com/kubernetes/kubernetes)
+- [Docker](https://github.com/moby/moby)
+- [NATS](https://github.com/nats-io/nats-server)
+- [Prometheus](https://github.com/prometheus/prometheus)
+
+In the last few years, this language has opened its place in Iranian companies and it is used for the development of backend services.
 
 ## Review Me
 
