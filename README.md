@@ -132,4 +132,3 @@ written projects:
   - We it on the cloud with its manifests
   - using server and ingress to send requests and see how they distributed between instances
   - We also see how we can mount configuration on Kubernetes with [configmap](https://kubernetes.io/docs/concepts/configuration/configmap/).
-    > > > > > > > new/main
