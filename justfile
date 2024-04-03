@@ -1,7 +1,7 @@
 default:
     @just --list
 
-# build steps
+# build all the examples
 build:
     #!/usr/bin/env bash
     set -euo pipefail
