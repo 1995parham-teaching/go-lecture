@@ -2,6 +2,8 @@
 
 <p align="center">
   <img alt="banner" src="./.github/assets/banner.jpg" height="200px" />
+  <br />
+  <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/1995parham-teaching/go-lecture/build.yaml?style=for-the-badge">
 </p>
 
 ## Introduction
