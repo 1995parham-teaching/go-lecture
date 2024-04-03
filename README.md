@@ -1,4 +1,6 @@
 <h1 align="center">🐼 Learning Go 🤓</h1>
+<h6 align="center">Learn to develop cloud-native programs with Go!</h6>
+
 
 <p align="center">
   <img alt="banner" src="./.github/assets/banner.jpg" height="200px" />
@@ -7,8 +9,6 @@
 </p>
 
 ## Introduction
-
-> Learn to develop cloud-native programs with Go!
 
 The Golang programming language is very similar to the C programming language,
 and its purpose is to reduce complexity in program development.
@@ -23,6 +23,7 @@ Among the tools that have been developed with this language are:
 In the last few years, this language has opened its place in Iranian companies,
 and it is used for the development of backend services.
 
+> [!NOTE]
 > C background is **required** for learning Go.
 
 ## Outline (As a separate course)
