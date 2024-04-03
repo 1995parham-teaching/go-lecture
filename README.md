@@ -1,4 +1,4 @@
-<h1 align="center"> Learning Go </h1>
+<h1 align="center">🐼 Learning Go 🤓</h1>
 
 <p align="center">
   <img alt="banner" src="./.github/assets/banner.jpg" height="200px" />
