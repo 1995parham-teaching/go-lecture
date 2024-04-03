@@ -104,7 +104,7 @@ Reviewing these source codes are useful for learning Go but there aren't enough.
 
 ## Continue your journey 🧳
 
-You can visit [go101](https://github.com/1995parham-learning/go101) which contains
+You can visit [Go101](https://github.com/1995parham-learning/go101) which contains
 some more advance concepts of Golang.
 
 ## Review Me
