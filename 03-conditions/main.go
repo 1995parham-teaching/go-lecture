@@ -18,6 +18,15 @@ func main() {
 	default:
 		fmt.Println("this should not happen")
 	}
+
+	const name = "Parham"
+
+	switch name {
+	case "Parham":
+		fmt.Println("Yooohoo")
+	default:
+		fmt.Println("Noooo")
+	}
 }
 
 func Fibonacci(n int) int {

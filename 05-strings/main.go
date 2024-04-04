@@ -2,9 +2,11 @@ package main
 
 import "fmt"
 
+// https://en.wikipedia.org/wiki/UTF-8
+
 // g defined as a global constant variable,
 // which is added into binary output .rodata section.
-// > strings 05-strings | grep "Global"
+// $ strings 05-strings | grep "Global"
 const g = "Global string is which defined"
 
 func main() {
@@ -18,6 +20,8 @@ func main() {
 
 	fmt.Println(s1[0])
 	fmt.Println(s2)
+	// 11011000 (216) means it needs another byte to be a valid UTF-8.
+	fmt.Println(s3[0])
 	fmt.Println(s3[1])
 	fmt.Printf("%c\n", s3[1])
 
