@@ -8,8 +8,10 @@ const (
 	c2 int64 = 11
 )
 
-var v1 = 10
-var v2 uint64 = 10
+var (
+	v1        = 10
+	v2 uint64 = 10
+)
 
 /*
 	var (
@@ -33,4 +35,5 @@ func main() {
 	fmt.Printf("z = %f\n", z)
 	fmt.Printf("z = %.10f\n", z)
 	fmt.Printf("z = %g\n", z)
+	fmt.Printf("z = %.*f", 12, z)
 }
