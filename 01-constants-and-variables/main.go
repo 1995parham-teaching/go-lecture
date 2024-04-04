@@ -35,5 +35,8 @@ func main() {
 	fmt.Printf("z = %f\n", z)
 	fmt.Printf("z = %.10f\n", z)
 	fmt.Printf("z = %g\n", z)
+	// printf allows you to specify the precision using a parameter
+	// (that precedes the value) if you use a .* as the precision
+	// in the format tag.
 	fmt.Printf("z = %.*f", 12, z)
 }
