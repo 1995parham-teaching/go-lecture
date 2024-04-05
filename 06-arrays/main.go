@@ -3,8 +3,9 @@ package main
 import "fmt"
 
 func main() {
+	// if you remember in C: int a[10]
 	var a [10]int
-	var b = [...]int{1, 2, 3, 4}
+	b := [...]int{1, 2, 3, 4}
 	c := [4]int{2, 4, 6, 8}
 	d := [4]int{1}
 
