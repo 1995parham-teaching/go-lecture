@@ -39,4 +39,8 @@ func main() {
 	// (that precedes the value) if you use a .* as the precision
 	// in the format tag.
 	fmt.Printf("z = %.*f", 12, z)
+
+	// %v is a Go unique way to print variable,
+	// it behaves like fmt.Println.
+	fmt.Printf("z = %v", z)
 }
