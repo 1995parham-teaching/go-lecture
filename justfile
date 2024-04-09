@@ -10,5 +10,6 @@ build:
       echo "*************"
       cd $step &> /dev/null
       go build -o main.out || true
+      go test
       cd - &> /dev/null
     done

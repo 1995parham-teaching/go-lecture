@@ -3,7 +3,7 @@ package mutex_test
 import (
 	"testing"
 
-	"github.com/1995parham-teaching/hello-go/mutex"
+	"github.com/1995parham-teaching/go-lecture/mutex"
 )
 
 func TestOne(t *testing.T) {
