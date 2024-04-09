@@ -33,7 +33,7 @@ func main() {
 	s4 := a1[1:3]
 	s4[0] = 20
 
-	fmt.Printf("s4: %v\n", s4)
+	fmt.Printf("s4: %v, cap(s4): %d, len(s4): %d\n", s4, cap(s4), len(s4))
 	fmt.Printf("a1 after \"s3[0] = 20\": %v\n", a1)
 
 	s5 := s4
