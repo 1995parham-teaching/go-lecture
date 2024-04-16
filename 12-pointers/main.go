@@ -27,7 +27,10 @@ func main() {
 	fmt.Printf("%d\n", a)
 
 	b := new(int)
-	*b = 10
+	*b = 12
+	fmt.Printf("b = %p, *b = %d\n", b, *b)
+
+	b = &a
 	fmt.Printf("b = %p, *b = %d\n", b, *b)
 
 	var c *int
