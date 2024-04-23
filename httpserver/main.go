@@ -1,15 +1,19 @@
 package main
 
 import (
-	"log"
+	"log/slog"
 	"net/http"
+	"os"
 
 	"github.com/1995parham-teaching/go-lecture/httpserver/handler"
 )
 
 func main() {
+	logger := slog.New(slog.NewTextHandler(os.Stderr, nil))
+
 	h := handler.Hello{
-		From: "Golang",
+		From:   "Golang",
+		Logger: logger,
 	}
 
 	mux := http.NewServeMux()
@@ -19,6 +23,6 @@ func main() {
 	mux.HandleFunc("GET /hello/{username}", h.User)
 
 	if err := http.ListenAndServe("0.0.0.0:1373", mux); err != nil {
-		log.Fatal(err)
+		logger.Error("http server failed", "error", err.Error())
 	}
 }

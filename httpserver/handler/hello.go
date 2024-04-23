@@ -3,27 +3,28 @@ package handler
 import (
 	"encoding/json"
 	"fmt"
-	"log"
+	"log/slog"
 	"net/http"
 
 	"github.com/1995parham-teaching/go-lecture/httpserver/request"
 )
 
 type Hello struct {
-	From string
+	From   string
+	Logger *slog.Logger
 }
 
 func (h Hello) User(w http.ResponseWriter, r *http.Request) {
 	value := r.PathValue("username")
 
-	log.Println(value)
+	h.Logger.Info("read username from path parameter", "username", value)
 
 	w.WriteHeader(http.StatusNoContent)
 }
 
 func (h Hello) Get(w http.ResponseWriter, r *http.Request) {
 	if value := r.FormValue("hello"); value != "" {
-		log.Println(value)
+		h.Logger.Info("read hello from query parameter", "hello", value)
 	}
 
 	enc, err := json.Marshal(fmt.Sprintf("Hello World from %s", h.From))
@@ -45,9 +46,9 @@ func (h Hello) Post(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if req.Count == nil {
-		log.Println("There is no count")
+		h.Logger.Info("There is no count")
 	} else {
-		log.Printf("There is a count %d", *req.Count)
+		h.Logger.Info("There is a count", "count", *req.Count)
 	}
 
 	enc, err := json.Marshal(fmt.Sprintf("Hello to %s from %s", req.Name, h.From))
