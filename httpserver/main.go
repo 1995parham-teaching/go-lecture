@@ -13,7 +13,7 @@ func main() {
 
 	h := handler.Hello{
 		From:   "Golang",
-		Logger: logger,
+		Logger: logger.With("handler", "hello"),
 	}
 
 	mux := http.NewServeMux()
