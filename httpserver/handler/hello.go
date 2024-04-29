@@ -38,6 +38,13 @@ func (h Hello) Get(w http.ResponseWriter, r *http.Request) {
 }
 
 func (h Hello) Post(w http.ResponseWriter, r *http.Request) {
+	ct := r.Header.Get("Content-Type")
+
+	if ct != "application/json" {
+		w.WriteHeader(http.StatusBadRequest)
+		return
+	}
+
 	var req request.Name
 
 	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
