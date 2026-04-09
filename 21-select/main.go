@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	"math/rand"
+	"math/rand/v2"
 	"time"
 )
 
@@ -10,7 +10,7 @@ func wait() chan int {
 	ch := make(chan int)
 
 	go func() {
-		r := rand.Intn(10)
+		r := rand.IntN(10)
 		time.Sleep(time.Duration(r) * time.Second)
 
 		close(ch)

@@ -83,11 +83,13 @@ func main() {
 		Number:  0,
 	}))
 
-	// parses the returned error from iReturnErrorError as MyError1
+	// parses the returned error from iReturnErrorError as My1Error
 	// so we can get access to its details.
-	// myError1 := &MyError1{}
-	myError1 := new(My1Error)
-	if ok := errors.As(iReturnErrorError(0), myError1); ok {
-		fmt.Printf("we have MyError1 from iReturnErrorError (%s, %d)\n", myError1.Message, myError1.Number)
+	//
+	// errors.AsType[E] (new in Go 1.26) is the generic, type-safe replacement
+	// for the older errors.As(err, &target) pattern — no need to allocate a
+	// zero value first and no out-parameter.
+	if myError1, ok := errors.AsType[My1Error](iReturnErrorError(0)); ok {
+		fmt.Printf("we have My1Error from iReturnErrorError (%s, %d)\n", myError1.Message, myError1.Number)
 	}
 }

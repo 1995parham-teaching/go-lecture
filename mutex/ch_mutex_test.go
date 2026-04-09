@@ -10,6 +10,7 @@ func TestOne(t *testing.T) {
 	t.Parallel()
 
 	m := mutex.NewChannelMutex()
+	done := make(chan struct{})
 	f := 0
 
 	t.Log(t.Name())
@@ -21,18 +22,17 @@ func TestOne(t *testing.T) {
 		f = 1
 
 		m.Release()
+		close(done)
 	}()
 
-	for {
-		m.Acquire()
-		t.Log("Thread-2")
+	<-done
 
-		if f == 1 {
-			m.Release()
+	m.Acquire()
+	t.Log("Thread-2")
 
-			break
-		} else {
-			m.Release()
-		}
+	if f != 1 {
+		t.Fatalf("expected f == 1, got %d", f)
 	}
+
+	m.Release()
 }

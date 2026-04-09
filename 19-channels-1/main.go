@@ -7,7 +7,7 @@ func main() {
 	ch := make(chan int) // with 0 room (unbuffered channel)
 
 	go func() {
-		for i := 0; i < 10; i++ {
+		for i := range 10 {
 			ch <- i
 		}
 

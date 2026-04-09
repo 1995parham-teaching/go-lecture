@@ -1,7 +1,6 @@
 <h1 align="center">🐼 Learning Go 🤓</h1>
 <h6 align="center">Learn to develop cloud-native programs with Go!</h6>
 
-
 <p align="center">
   <img alt="banner" src="./.github/assets/banner.jpg" height="200px" />
   <br />
@@ -93,6 +92,16 @@ Reviewing these source codes are useful for learning Go but there aren't enough.
 22. JSON
 23. `go.mod`
 24. Packages
+25. Self-referential generics (Go 1.26)
+
+### Go 1.26 features used in this repo
+
+- `new(expr)` for inline pointer initialization — see `22-json/`
+- `errors.AsType[E]` generic error assertion — see `16-errors/`
+- `slog.NewMultiHandler` log fan-out — see `httpserver/main.go`
+- `signal.NotifyContext` cancel-cause shutdown — see `httpserver/main.go`
+- Self-referential generic type parameters — see `33-generics-self-referential/`
+- `go fix -modernize` — run with `just modernize`
 
 ### Echo
 
@@ -113,7 +122,6 @@ One of the main steps in learning new language and its best practices is reviewi
 written projects:
 
 - <https://github.com/1995parham/koochooloo>:
-
   - In the first step, you need to review the project structure and find out how modules are related
   - Then we continue with running the docker-compose to have the requirements
   - And in the final step, we lunch the application and trying it with curl based on its swagger
@@ -121,16 +129,14 @@ written projects:
     has its metrics based on [otel](https://github.com/open-telemetry/).
 
 - <https://github.com/1995parham/fandogh>:
-
   - This example containing the migration and how we store things on the [MongoDB](https://www.mongodb.com/) database.
 
 - <https://github.com/1995parham/saf>:
-
   - This example shows tracing in action with [NATS](https://nats.io/) as a message queue.
   - Also, We can use profiler to see how replacing [Echo](https://echo.labstack.com/) with [GoFiber](https://gofiber.io/) increase the performance.
   - This project has Helm chart and after knowing Kubernetes basis we can lunch it on the cloud with its Helm.
 
-- <https://github.com/1995parham/k1s>:
+- <https://github.com/1995parham-teaching/k1s>:
   - In the first step, we review the server structure. The server is stateless and only returns simple responses.
   - We it on the cloud with its manifests
   - using server and ingress to send requests and see how they distributed between instances

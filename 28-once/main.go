@@ -5,36 +5,29 @@ import (
 	"sync"
 )
 
+// LazyInit demonstrates sync.OnceValue (Go 1.21+),
+// which is the modern, idiomatic replacement for the older
+// sync.Once + sentinel-field pattern.
 type LazyInit struct {
-	once  sync.Once
-	value int
+	value func() int
+}
+
+func NewLazyInit() *LazyInit {
+	return &LazyInit{
+		value: sync.OnceValue(func() int {
+			return 1820
+		}),
+	}
 }
 
 func (s *LazyInit) Value() int {
-	s.init()
-
-	return s.value
-}
-
-func (s *LazyInit) init() {
-	s.once.Do(func() { s.value = 1820 })
-}
-
-func (s *LazyInit) SetValue(v int) {
-	s.value = v
+	return s.value()
 }
 
 func main() {
-	const v = 12
+	l := NewLazyInit()
 
-	var l LazyInit
-	/*
-	 * if you use SetValue() berfore getting the value (initiation happens on Value())
-	 * your setted value is replaced by initiation value.
-	 *	l.SetValue(13)
-	 *	l.Value() --> 1820
-	 */
+	// First call runs the initializer; subsequent calls return the cached value.
 	fmt.Printf("%d\n", l.Value())
-	l.SetValue(v)
 	fmt.Printf("%d\n", l.Value())
 }

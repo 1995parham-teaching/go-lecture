@@ -11,17 +11,17 @@ type Key interface {
 	fmt.Stringer
 }
 
-type Shard[K Key, V interface{}] struct {
+type Shard[K Key, V any] struct {
 	sync.RWMutex
 	data map[K]V
 }
 
-type ShardedMap[K Key, V interface{}] []*Shard[K, V]
+type ShardedMap[K Key, V any] []*Shard[K, V]
 
-func NewShardedMap[K Key, V interface{}](nshards int) ShardedMap[K, V] {
+func NewShardedMap[K Key, V any](nshards int) ShardedMap[K, V] {
 	shards := make([]*Shard[K, V], nshards)
 
-	for i := 0; i < nshards; i++ {
+	for i := range nshards {
 		data := make(map[K]V)
 		shards[i] = &Shard[K, V]{data: data}
 	}

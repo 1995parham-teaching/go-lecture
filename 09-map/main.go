@@ -24,7 +24,7 @@ func main() {
 
 	s := make(map[int]bool)
 
-	for i := 0; i < 3; i++ {
+	for range 3 {
 		var n int
 		fmt.Scanf("%d", &n)
 

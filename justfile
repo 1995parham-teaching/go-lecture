@@ -1,6 +1,10 @@
 default:
     @just --list
 
+# run the Go 1.26 modernizer fixers across the whole module
+modernize:
+    go fix ./...
+
 # build all the examples
 build:
     #!/usr/bin/env bash

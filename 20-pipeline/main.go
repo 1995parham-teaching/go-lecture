@@ -19,7 +19,7 @@ func main() {
 	var wg sync.WaitGroup
 
 	// create 2 process to process data from the channel
-	for id := 0; id < processRoutines; id++ {
+	for id := range processRoutines {
 		wg.Add(1)
 		go func(id int) {
 			// each processor prints the data besides its id

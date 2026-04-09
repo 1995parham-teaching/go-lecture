@@ -26,7 +26,7 @@ func (s Student) Hello() string {
 	return "Hello"
 }
 
-type Any interface{}
+type Any any
 
 func main() {
 	var p Printer
