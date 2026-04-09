@@ -25,6 +25,12 @@ and it is used for the development of backend services.
 > [!NOTE]
 > C background is **required** for learning Go.
 
+> [!IMPORTANT]
+> The examples in this repository target **Go 1.26** and make use of features
+> introduced in that release. See the
+> [Go 1.26 features used in this repo](#go-126-features-used-in-this-repo)
+> section below for the highlights.
+
 ## Outline (As a separate course)
 
 - History
@@ -39,16 +45,19 @@ and it is used for the development of backend services.
 - `struct`
 - `interface`
 - Pointers
-- Errors
-- Concurrency and channels
+- Errors (including the generic `errors.AsType[E]` from Go 1.26)
+- Concurrency and channels (`sync.WaitGroup.Go`, `sync.OnceValue`)
 - `select`
+- Generics (including self-referential type parameters from Go 1.26)
 - `go mod` and using packages
 - An overview of advanced features
 - Introduction to HTTP protocol
-- HTTP server implementation
-- Settings management paragraph
+- HTTP server implementation with `net/http`'s pattern-based routing
+  and structured logging via `log/slog` (`slog.NewMultiHandler`)
+- Graceful shutdown with `signal.NotifyContext` cancel causes
+- Settings management
 - Metric, Log and Tracing
-- connection with the database using PostgreSQL and GORM
+- Connection with the database using PostgreSQL and GORM
 - Introduction to Docker and containerization
 
 At the beginning of the course, an introduction to the Go language is made and students implement simple programs with it.
@@ -92,24 +101,59 @@ Reviewing these source codes are useful for learning Go but there aren't enough.
 22. JSON
 23. `go.mod`
 24. Packages
-25. Self-referential generics (Go 1.26)
+25. `defer`
+26. `variadic`
+27. `regex`
+28. `sync.Once` / `sync.OnceValue`
+29. `panic`
+30. UTF-8
+31. The `nil` interface trap
+32. Type aliases vs. type definitions
+33. Self-referential generics (Go 1.26)
 
 ### Go 1.26 features used in this repo
 
-- `new(expr)` for inline pointer initialization — see `22-json/`
-- `errors.AsType[E]` generic error assertion — see `16-errors/`
-- `slog.NewMultiHandler` log fan-out — see `httpserver/main.go`
-- `signal.NotifyContext` cancel-cause shutdown — see `httpserver/main.go`
-- Self-referential generic type parameters — see `33-generics-self-referential/`
-- `go fix -modernize` — run with `just modernize`
+This repository has been refreshed to use **Go 1.26** language and library
+features. The most notable ones — and where to find a runnable example for
+each — are:
 
-### Echo
+| Feature                                                        | Where                                                                            |
+| -------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `new(expr)` builtin: pointer + initial value in one step       | [`22-json/main.go`](./22-json/main.go)                                           |
+| `errors.AsType[E]` — generic, type-safe `errors.As`            | [`16-errors/main.go`](./16-errors/main.go)                                       |
+| Self-referential generic type parameters (`Adder[A Adder[A]]`) | [`33-generics-self-referential/main.go`](./33-generics-self-referential/main.go) |
+| `slog.NewMultiHandler` for log fan-out                         | [`httpserver/main.go`](./httpserver/main.go)                                     |
+| `signal.NotifyContext` + `context.Cause` for graceful shutdown | [`httpserver/main.go`](./httpserver/main.go)                                     |
 
-0. Say hello to Echo
-1. HTTP Handlers
-2. Request Binding
-3. Path Parameters
-4. Query Strings
+The repository also benefits from earlier-but-still-modern features that are
+worth highlighting in class:
+
+- `sync.WaitGroup.Go(func)` instead of `Add` / `go` / `defer Done`
+  (see [`17-concurrency/main.go`](./17-concurrency/main.go) and
+  [`20-pipeline/main.go`](./20-pipeline/main.go))
+- `sync.OnceValue` instead of `sync.Once` + sentinel field
+  (see [`28-once/main.go`](./28-once/main.go))
+- `for range N` instead of the C-style `for i := 0; i < N; i++`
+  (see [`09-map`](./09-map/main.go), [`19-channels-1`](./19-channels-1/main.go),
+  [`20-pipeline`](./20-pipeline/main.go), [`23-sharding`](./23-sharding/main.go))
+- `math/rand/v2` (see [`21-select/main.go`](./21-select/main.go))
+- `net/http` pattern-based routing — `mux.HandleFunc("GET /hello/{username}", …)`
+  (see [`httpserver/main.go`](./httpserver/main.go))
+- `mime.ParseMediaType` for tolerant `Content-Type` checks
+  (see [`httpserver/handler/hello.go`](./httpserver/handler/hello.go))
+
+### Keeping the codebase modern
+
+Go 1.26 ships a much expanded `go fix` with a suite of _modernizer_ analyzers
+that automatically rewrite older idioms (`interface{}` → `any`,
+`for i := 0; i < n; i++` → `for range n`, `WaitGroup.Add`/`Done` → `WaitGroup.Go`,
+and many more). To run all of them across this module:
+
+```sh
+just modernize
+# or, equivalently:
+go fix ./...
+```
 
 ## Continue your journey 🧳
 
