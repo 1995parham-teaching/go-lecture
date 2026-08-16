@@ -5,15 +5,36 @@ default:
 modernize:
     go fix ./...
 
-# build all the examples
-build:
+# format every package
+fmt:
+    go fmt ./...
+
+# fail when something is not gofmt clean, without changing it
+fmt-check:
     #!/usr/bin/env bash
     set -euo pipefail
-    for step in $(find . -maxdepth 1 -type d -name '[!.]*'); do
-      echo "*** $step ***"
-      echo "*************"
-      cd $step &> /dev/null
-      go build -o main.out || true
-      go test
-      cd - &> /dev/null
-    done
+    unformatted="$(gofmt -l .)"
+    if [ -n "$unformatted" ]; then
+      echo "not gofmt clean:"
+      echo "$unformatted"
+      exit 1
+    fi
+
+# build every example
+build:
+    go build ./...
+
+# report suspicious constructs
+vet:
+    go vet ./...
+
+# run the tests
+test:
+    go test ./...
+
+# everything the ci runs
+check: fmt-check vet build test
+
+# run a single example, e.g. just run 05-strings
+run example:
+    go run ./{{ example }}

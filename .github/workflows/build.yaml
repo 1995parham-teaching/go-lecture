@@ -1,15 +1,30 @@
 ---
 name: build
 on:
-  - push
+  push:
+    branches:
+      - main
+
+  pull_request:
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "build-${{ github.ref }}"
+  cancel-in-progress: true
+
 jobs:
-  build:
-    name: test
+  check:
+    name: check
     runs-on: ubuntu-latest
     steps:
-      - uses: extractions/setup-just@v2
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/checkout@v7
+      - uses: extractions/setup-just@v4
+      - uses: actions/setup-go@v7
         with:
-          go-version: 'stable'
-      - run: just build
+          # follow the version in go.mod, instead of whatever is stable today
+          go-version-file: go.mod
+      - run: just check

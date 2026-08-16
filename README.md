@@ -155,6 +155,60 @@ just modernize
 go fix ./...
 ```
 
+## Examples 📂
+
+Every directory is a runnable program. Run one with `just run <directory>`,
+for example `just run 05-strings`.
+
+| Example | What it shows |
+| --- | --- |
+| [`00-hello-world`](./00-hello-world) | The first program: `package main`, `import`, and `func main` |
+| [`01-constants-and-variables`](./01-constants-and-variables) | `var`, `const`, `:=`, and zero values |
+| [`02-calculation`](./02-calculation) | Numeric types, conversions, and floating point surprises |
+| [`03-conditions`](./03-conditions) | `if` and `switch` |
+| [`04-loops`](./04-loops) | `for` as the only loop. Reads `n` from the terminal first |
+| [`05-strings`](./05-strings) | A string is bytes, not characters: indexing versus `range` over UTF-8 |
+| [`06-arrays`](./06-arrays) | Fixed size arrays |
+| [`07-slices`](./07-slices) | `make`, `len` versus `cap`, and the reallocation `append` can cause |
+| [`08-arrays-and-slices`](./08-arrays-and-slices) | Slices sharing one backing array |
+| [`09-map`](./09-map) | A `nil` map versus a `make`d one |
+| [`10-structs`](./10-structs) | Methods, the `String()` method, and struct comparability |
+| [`11-interfaces`](./11-interfaces) | Implicit satisfaction, type assertions, and the type switch |
+| [`12-pointers`](./12-pointers) | Why a swap by value cannot swap |
+| [`13-structs-with-pointer`](./13-structs-with-pointer) | Pointer receivers, and satisfying an interface |
+| [`14-strconv`](./14-strconv) | Converting between strings and numbers, with bases |
+| [`15-functions-with-multiple-return`](./15-functions-with-multiple-return) | Returning more than one value |
+| [`16-errors`](./16-errors) | `error` as an interface, wrapping, and `errors.AsType[E]` from Go 1.26 |
+| [`17-concurrency`](./17-concurrency) | Goroutines and `sync.WaitGroup.Go`, instead of a busy loop |
+| [`18-function-type`](./18-function-type) | Functions as values: closures, and wrapping one function in another |
+| [`19-channels-1`](./19-channels-1) | Unbuffered versus buffered channels |
+| [`19-channels-2`](./19-channels-2) | How a channel synchronises two goroutines |
+| [`20-pipeline`](./20-pipeline) | Chaining stages together with channels |
+| [`21-select`](./21-select) | `select` over several channels, with `math/rand/v2` |
+| [`22-json`](./22-json) | Struct tags, and a pointer field to tell missing from zero |
+| [`23-sharding`](./23-sharding) | A generic sharded map, one mutex per shard |
+| [`24-types`](./24-types) | Defining a new type on top of an existing one |
+| [`25-defer`](./25-defer) | `defer` for cleanup, and when it runs |
+| [`26-variadic`](./26-variadic) | Functions taking any number of arguments |
+| [`27-regex`](./27-regex) | `regexp`, matching and replacing |
+| [`28-once`](./28-once) | `sync.OnceValue` for one-time initialisation |
+| [`29-panic`](./29-panic) | A manual panic, a runtime panic, and `recover` |
+| [`30-utf`](./30-utf) | Walking a UTF-8 string byte by byte |
+| [`31-interface-is-nil`](./31-interface-is-nil) | The typed nil: a non-`nil` interface holding a `nil` value |
+| [`32-type-alias`](./32-type-alias) | An alias versus a defined type |
+| [`33-generics-self-referential`](./33-generics-self-referential) | Self-referential type parameters, new in Go 1.26 |
+| [`httpserver`](./httpserver) | An HTTP server: pattern routing, graceful shutdown, layered packages |
+| [`mutex`](./mutex) | `sync.Mutex`, with tests |
+
+## Development 🛠️
+
+```sh
+just              # list every recipe
+just run 09-map   # run a single example
+just check        # everything the ci runs: gofmt, vet, build, test
+just modernize    # apply the go 1.26 modernizer fixers
+```
+
 ## Continue your journey 🧳
 
 You can visit [Go101](https://github.com/1995parham-learning/go101) which contains
