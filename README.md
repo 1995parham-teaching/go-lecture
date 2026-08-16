@@ -31,6 +31,12 @@ and it is used for the development of backend services.
 > [Go 1.26 features used in this repo](#go-126-features-used-in-this-repo)
 > section below for the highlights.
 
+> [!NOTE]
+> This module has **zero external dependencies** — no `require` block, no
+> `go.sum`, nothing to `go get`. Everything here is the standard library, the
+> HTTP server included. `just deps` fails the build if that ever stops being
+> true.
+
 ## Outline (As a separate course)
 
 - History
@@ -71,7 +77,11 @@ the purpose of which is to familiarize students with database interfaces in the 
 ## Outline (As a part of internet engineering course)
 
 Using Go for design and implementing servers contains two major steps.
-First is about learning Go itself and another step is learning an HTTP framework (here we go with Echo).
+First is about learning Go itself, and the second is writing an HTTP server.
+For the second step we stay on the **standard library**: this module has
+**no external dependencies at all**, and `httpserver/` is built on `net/http`
+with the pattern-based routing added in Go 1.22. Learn that first — when you
+later reach for a framework, you will know exactly what it is doing for you.
 Reviewing these source codes are useful for learning Go but there aren't enough.
 
 ### Go

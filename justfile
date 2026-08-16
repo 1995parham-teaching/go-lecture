@@ -32,8 +32,20 @@ vet:
 test:
     go test ./...
 
+# fail if the module ever grows an external dependency
+deps:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    external="$(go list -deps ./... | grep -E '^[^/]+\.[^/]+/' | grep -v '^github.com/1995parham-teaching/go-lecture' || true)"
+    if [ -n "$external" ]; then
+      echo "this module is meant to have no external dependencies, but it imports:"
+      echo "$external"
+      exit 1
+    fi
+    echo "no external dependencies"
+
 # everything the ci runs
-check: fmt-check vet build test
+check: fmt-check vet deps build test
 
 # run a single example, e.g. just run 05-strings
 run example:
