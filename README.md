@@ -241,7 +241,7 @@ written projects:
 
 - <https://github.com/1995parham/saf>:
   - This example shows tracing in action with [NATS](https://nats.io/) as a message queue.
-  - Also, We can use profiler to see how replacing [Echo](https://echo.labstack.com/) with [GoFiber](https://gofiber.io/) increase the performance.
+  - Also, we can use the profiler to compare its [GoFiber](https://gofiber.io/) server with the `net/http` one in [`httpserver`](./httpserver).
   - This project has Helm chart and after knowing Kubernetes basis we can lunch it on the cloud with its Helm.
 
 - <https://github.com/1995parham-teaching/k1s>:
