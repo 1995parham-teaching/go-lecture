@@ -41,9 +41,10 @@ func main() {
 		IdleTimeout:       60 * time.Second,
 	}
 
-	// signal.NotifyContext in Go 1.26 returns a CancelCauseFunc and the
-	// context's cancel cause carries the received signal — useful when you
-	// want to log *why* you're shutting down.
+	// signal.NotifyContext returns the context and a plain stop function
+	// (a context.CancelFunc). When a signal cancels the context, context.Cause
+	// on it returns an error naming the signal, which is useful when you want
+	// to log *why* you're shutting down.
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer stop()
 

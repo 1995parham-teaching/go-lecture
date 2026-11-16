@@ -35,8 +35,9 @@ func main() {
 
 	fmt.Printf("s1: %+v, len(s1): %d, cap(s1): %d\n", s1, len(s1), cap(s1))
 
+	fmt.Print("range s1:")
 	for index, value := range s1 {
-		fmt.Printf("s1[%d]: %d,", index, value)
+		fmt.Printf(" %d:%d", index, value)
 	}
 	fmt.Println()
 
